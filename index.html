@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-GB" xml:lang="en-GB" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>Zoomify</title>
+
+	<link rel="stylesheet" type="text/css" href="./zoomify.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="./img-enlarge.css" media="all" />
+
+</head>
+<body>
+	<div id="view">
+		<img id="img-enlarge" width="800px" height="600px" src="./index.jpg">
+	</div>
+	<!--  Modal定义 -->
+	<div id="zoomModal" class="zoom-modal">
+	    <!-- The Close Button -->
+	    <span id="close" onclick="document.getElementById('zoomModal').style.display='none'">&times;</span>
+
+	    <div id="image-zoom-wrapper">
+	         <!-- Modal Content (The Image) -->
+	        <img id="image-zoom" class="image-zoom-modal-content" alt="Example image" />
+	    </div>
+
+	    <!-- Modal Caption (Image Text) -->
+	    <div id="caption"></div>
+	</div>
+
+	<script src="./zoomify.js" async="async"></script>
+	<script src="./jquery-1.11.1.min.js"></script>
+
+
+
+
+
+
+	<!-- You don't need this tracking code for Google Analytics, it's just for my own curiosity. -->
+
+		<script type="text/javascript">
+		//<![CDATA[
+
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-309730-6']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+
+		//]]>
+		</script>
+
+</body>
+</html>
