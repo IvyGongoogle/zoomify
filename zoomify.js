@@ -628,6 +628,7 @@
 		// addEventListener(window, 'load', init); // Not DOM ready, as we need the image to have loaded
 		// addEventListener(document.getElementsByClassName("view")[0],'click', init)
 
+		var sourceImg = document.getElementById("img-enlarge");
 
 		var modal = document.getElementById("zoomModal");
 
@@ -635,18 +636,23 @@
 		var modalImg = document.getElementById("image-zoom");
 		var captionText = document.getElementById("caption");
 
-		$("#img-enlarge").click(function(){
-			modal.style.display = "block";
-		    modalImg.src = $(this).attr("src")
-		    captionText.innerHTML = $(this).attr("alt");
-		    init();
-		})
+		if (sourceImg) {
+			sourceImg.addEventListener('click', function(e) {
+				modal.style.display = 'block';
+				modalImg.setAttribute('src', this.getAttribute('src'));
+				captionText.textContent = this.getAttribute('alt');
+				init();
+				e.preventDefault();
+			});
+		}
 
-		// Get the <span> element that closes the modal
-		var span = document.getElementsByClassName("close")[0];
+		var close = document.getElementsByClassName("close")[0];
 
 		// When the user clicks on <span> (x), close the modal
-		document.getElementById("close").click(function(){
-		  modal.style.display = "none";
-		})
+		if (close) {
+			close.addEventListener('click', function(e) {
+				modal.style.display = "none";
+				e.preventDefault();
+			});
+		}
 })(document, window);

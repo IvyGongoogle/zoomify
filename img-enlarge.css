@@ -23,16 +23,6 @@
     background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
 }
 
-/* Modal Content (Image) */
-
-.image-zoom-modal-content {
-    margin: auto;
-    display: block;
-    height: 90%；
-    width:100%;
-    /*max-width: 700px;*/
-}
-
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
 #caption {
     margin: auto;
@@ -83,7 +73,7 @@
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
-    #img-enlarged-modal-content, .image-zoom-modal-content {
+    .image-zoom-modal-content {
         width: 100%;
     }
 }
