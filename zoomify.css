@@ -9,11 +9,11 @@
 		position: relative;
 		text-align: left;
 		width: 90%;
-		/*height: 100%;*/
+		height: 90%;
 		overflow: auto;
 		margin: 10px auto;
 		border: 1px solid #000;
-		background: #000 url("/static/images/tools/zoom/loader.gif") no-repeat 50% 50%;
+		background: #000 url("loader.gif") no-repeat 50% 50%;
 		-moz-user-select: none;
 		-khtml-user-select: none;
 		-webkit-user-select: none;
@@ -46,14 +46,14 @@
 
 	#image-zoom-wrapper div.zoom-in,
 	#image-zoom-wrapper div.zoom-out {
-		background: url("/static/images/tools/zoom/zoom-in.png") no-repeat 0 0;
+		background: url("zoom-in.png") no-repeat 0 0;
 		position: absolute;
 		left: 10px;
 		top: 10px;
 	}
 
 	#image-zoom-wrapper div.zoom-out {
-		background-image: url("/static/images/tools/zoom/zoom-out.png");
+		background-image: url("zoom-out.png");
 		top: 46px;
 	}
 
@@ -72,14 +72,14 @@
 
 		#image-zoom-wrapper div.zoom-in,
 		#image-zoom-wrapper div.zoom-out {
-			background-image: url("/static/images/tools/zoom/zoom-in-104.png");
+			background-image: url("zoom-in-104.png");
 			background-size: 52px;
 			width: 52px;
 			height: 52px;
 		}
 
 		#image-zoom-wrapper div.zoom-out {
-			background-image: url("/static/images/tools/zoom/zoom-out-104.png");
+			background-image: url("zoom-out-104.png");
 			left: auto;
 			right: 10px;
 			top: 10px;
