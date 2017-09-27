@@ -489,7 +489,7 @@
 		function init() {
 
 			div_ref = document.getElementById('image-zoom-wrapper');
-			img_ref = document.getElementById('image-zoom');
+			img_ref = document.getElementById('myCanvas-zoom');
 
 			if (div_ref && img_ref) {
 
@@ -633,16 +633,31 @@
 		var modal = document.getElementById("zoomModal");
 
 		// Get the image and insert it inside the modal - use its "alt" text as a caption
-		var modalImg = document.getElementById("image-zoom");
+		// var modalImg = document.getElementById("image-zoom");
 		var captionText = document.getElementById("caption");
 
 		if (sourceImg) {
 			sourceImg.addEventListener('click', function(e) {
 				modal.style.display = 'block';
-				modalImg.setAttribute('src', this.getAttribute('src'));
+				// modalImg.setAttribute('src', this.getAttribute('src'));
 				captionText.textContent = this.getAttribute('alt');
 				init();
 				e.preventDefault();
+
+				//newly added
+				var img_buffer = document.createElement('img');
+		        var src=document.getElementById("img-enlarge").getAttribute("src")
+		        img_buffer.src=src
+		        var imgWidth=img_buffer.width;
+		        var imgHeight=img_buffer.height;
+		        var c = document.getElementById("myCanvas-zoom");
+		        var ctx = c.getContext("2d");
+		        c.width = imgWidth;
+		        c.height = imgHeight;
+		        var img = new Image();
+		        img.src = src
+		        ctx.drawImage(img, 0, 0, imgWidth, imgHeight);
+
 			});
 		}
 
